@@ -19,7 +19,7 @@ if __name__ == "__main__":
     parser.add_argument("--uri", required=True)
     parser.add_argument("--user", required=True)
     parser.add_argument("--password", required=True)
-    parser.add_argument("--cypher-dir", required=True)
+    parser.add_argument("--cypher-dir", dest="cypher_dir", required=True)
     parser.add_argument("--csv-url", required=True)
     args = parser.parse_args()
 
