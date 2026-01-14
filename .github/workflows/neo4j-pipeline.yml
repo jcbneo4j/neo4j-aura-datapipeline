@@ -69,4 +69,4 @@ jobs:
             --user "$NEO4J_USER" \
             --password "$NEO4J_PASSWORD" \
             --cypherdir "cypher" \
-            --csv-url "https://raw.githubusercontent.com/jcbneo4j/neo4j-aura-datapipeline/main/data/
+            --csv-url "https://raw.githubusercontent.com/jcbneo4j/neo4j-aura-datapipeline/main/data/"
