@@ -38,9 +38,8 @@ graph LR
     C --> D[Neo4j Driver]
     D --> E[AuraDB Instance]
     
-    F[JSON/CSV APIs] --> C
-    G[Flat Files] --> C
-    H[Custom Scrapers] --> C
+    F[CSV Flat Files] --> C
+    G[Custom Scrapers] --> C
 ```
 
 **Components:**
