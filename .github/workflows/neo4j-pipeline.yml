@@ -3,7 +3,8 @@ env:
   CSV_URLS: >-
     {
       "persons_csv": "https://raw.githubusercontent.com/${{ github.repository }}/main/data/persons.csv",
-      "movies_csv": "https://raw.githubusercontent.com/${{ github.repository }}/main/data/movies.csv"
+      "movies_csv": "https://raw.githubusercontent.com/${{ github.repository }}/main/data/movies.csv",
+      "rels_csv": "https://raw.githubusercontent.com/${{ github.repository }}/main/data/acted-in.csv"
     }
 on:
   push:
