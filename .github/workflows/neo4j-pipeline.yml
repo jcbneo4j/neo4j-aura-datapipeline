@@ -29,8 +29,8 @@ jobs:
 
       - name: Run Cypher scripts on Dev
         env:
-          NEO4J_URI: ${{ vars.NEO4J_DEV_URI }}
-          NEO4J_USER: ${{ vars.NEO4J_DEV_USER }}
+          NEO4J_URI: ${{ secrets.NEO4J_DEV_URI }}
+          NEO4J_USER: ${{ secrets.NEO4J_DEV_USER }}
           NEO4J_PASSWORD: ${{ secrets.NEO4J_DEV_PASSWORD }}
         run: |
           python scripts/run_cypher_pipeline.py \
@@ -38,7 +38,7 @@ jobs:
             --user "$NEO4J_USER" \
             --password "$NEO4J_PASSWORD" \
             --cypherdir "cypher" \
-            --csv-url "https://raw.githubusercontent.com/jcbneo4j/neo4j-aura-datapipeline/main/data/persons.csv"
+            --csv-url "https://raw.githubusercontent.com/jcbneo4j/neo4j-aura-datapipeline/main/data/"
 
   deploy_test:
     name: Deploy to Test Aura
@@ -60,8 +60,8 @@ jobs:
 
       - name: Run Cypher scripts on Test
         env:
-          NEO4J_URI: ${{ vars.NEO4J_TEST_URI }}
-          NEO4J_USER: ${{ vars.NEO4J_TEST_USER }}
+          NEO4J_URI: ${{ secrets.NEO4J_TEST_URI }}
+          NEO4J_USER: ${{ secrets.NEO4J_TEST_USER }}
           NEO4J_PASSWORD: ${{ secrets.NEO4J_TEST_PASSWORD }}
         run: |
           python scripts/run_cypher_pipeline.py \
@@ -69,4 +69,4 @@ jobs:
             --user "$NEO4J_USER" \
             --password "$NEO4J_PASSWORD" \
             --cypherdir "cypher" \
-            --csv-url "https://raw.githubusercontent.com/jcbneo4j/neo4j-aura-datapipeline/main/data/persons.csv"
+            --csv-url "https://raw.githubusercontent.com/jcbneo4j/neo4j-aura-datapipeline/main/data/"
