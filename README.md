@@ -39,7 +39,6 @@ graph LR
     D --> E[AuraDB Instance]
     
     F[CSV Flat Files] --> C
-    G[Custom Scrapers] --> C
 ```
 
 **Components:**
