@@ -1,5 +1,10 @@
 name: Neo4j Aura Data Pipeline
-
+env:
+  CSV_URLS: >-
+    {
+      "persons.csv": "https://raw.githubusercontent.com/${{ github.repository }}/main/data/persons.csv",
+      "movies.csv": "https://raw.githubusercontent.com/${{ github.repository }}/main/data/movies.csv"
+    }
 on:
   push:
     branches:
@@ -38,7 +43,7 @@ jobs:
             --user "$NEO4J_USER" \
             --password "$NEO4J_PASSWORD" \
             --cypherdir "cypher" \
-            --csv-url "https://raw.githubusercontent.com/jcbneo4j/neo4j-aura-datapipeline/main/data/"
+            --csv-urls "$CSV_URLS"
 
   deploy_test:
     name: Deploy to Test Aura
@@ -69,4 +74,4 @@ jobs:
             --user "$NEO4J_USER" \
             --password "$NEO4J_PASSWORD" \
             --cypherdir "cypher" \
-            --csv-url "https://raw.githubusercontent.com/jcbneo4j/neo4j-aura-datapipeline/main/data/"
+            --csv-urls "$CSV_URLS"
