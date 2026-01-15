@@ -2,8 +2,8 @@ name: Neo4j Aura Data Pipeline
 env:
   CSV_URLS: >-
     {
-      "persons.csv": "https://raw.githubusercontent.com/${{ github.repository }}/main/data/persons.csv",
-      "movies.csv": "https://raw.githubusercontent.com/${{ github.repository }}/main/data/movies.csv"
+      "persons_csv": "https://raw.githubusercontent.com/${{ github.repository }}/main/data/persons.csv",
+      "movies_csv": "https://raw.githubusercontent.com/${{ github.repository }}/main/data/movies.csv"
     }
 on:
   push:
