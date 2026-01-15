@@ -1,5 +1,3 @@
-
-```markdown
 # Neo4j Aura Data Pipeline
 
 This repository contains a data pipeline implementation for loading and managing data in **Neo4j AuraDB**, the fully managed cloud graph database service from Neo4j. Built for cloud infrastructure automation, it leverages expertise in Terraform, Kubernetes, Python/Go, and CI/CD workflows to streamline graph data operations.[attached_file:1]
@@ -102,4 +100,3 @@ ORDER BY p.name;
 - Performance optimizations
 - Kubernetes Helm charts
 - Data source connectors
-```
