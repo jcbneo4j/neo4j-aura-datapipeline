@@ -13,7 +13,7 @@ def run_scripts(uri, user, password, cypher_dir, csv_urls):
         for path in files:
             with open(path, "r", encoding="utf-8") as f:
                 query = f.read()
-            #print(f"Running {path}...")
+            print(f"Running {path}...")
             session.run(query, csvUrls=csv_urls_dict)
 
 if __name__ == "__main__":
